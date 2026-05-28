@@ -38,12 +38,12 @@ function Contacto() {
 
         <li>
           <a
-            href="https://www.google.com/maps?q=Avenida+Saenz+Peña+715,+San+Miguel+de+Tucumán,+Tucumán,+Argentina"
+            href="https://www.google.com/maps?q=Avenida+Saenz+Peña+745,+San+Miguel+de+Tucumán,+Tucumán,+Argentina"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaMapMarkerAlt />
-            Avenida Saenz Peña 715
+            Avenida Saenz Peña 745
           </a>
         </li>
 
