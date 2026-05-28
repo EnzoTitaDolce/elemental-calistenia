@@ -10,7 +10,7 @@ function Contacto() {
   return (
     <section id="contacto">
 
-      <h2>Contacto</h2>
+      <h2 id="contactoh1">Contacto</h2>
 
       <ul id="listaContacto">
 
