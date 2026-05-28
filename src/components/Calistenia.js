@@ -4,7 +4,7 @@ function Calistenia(){
 
     return(
         <div>
-            <h1>¿Qué es la Calistenia?</h1>
+            <h1 id="calish1">¿Qué es la Calistenia?</h1>
             <section id='calistenia'>
             <p>La calistenia es una forma de entrenamiento que utiliza el peso de tu propio cuerpo para
             desarrollar <strong>fuerza, resistencia, movilidad y control corporal</strong>. 
