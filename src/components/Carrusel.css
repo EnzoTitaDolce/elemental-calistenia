@@ -66,6 +66,9 @@
   border-radius: 50%;
   cursor: pointer;
 }
+.slide{
+  margin-bottom:30px;
+}
 
 .dot.active {
   background: white;

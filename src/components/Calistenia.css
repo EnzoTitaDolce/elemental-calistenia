@@ -4,6 +4,19 @@
     padding: auto;
     text-align: justify;
     font-size: small;
+    background-image: url('../assets/img/logoElemental.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#calisteniaArt{
+    background: rgba(255, 255, 255, 0.4);
+    color:black;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);;
 }
 p{
     margin-top: 15px;
@@ -13,8 +26,9 @@ p{
     margin-right: auto;
 }
 #calish1{
-    background: linear-gradient(rgb(170,244,247), rgb(0, 182, 189));
+    /*background: linear-gradient(rgb(170,244,247), rgb(0, 182, 189));*/
+    background: linear-gradient(135deg,#0f0f0f,#1c1c1c,#2b2b2b);
     padding-bottom: 5px;
     padding-top: 2px;
-    margin: 5px 0px;
+    margin: 5px 0px 8px 0px;
 }

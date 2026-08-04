@@ -1,15 +1,27 @@
 #nosotrosh1{
-    background: linear-gradient(rgb(255,216,122), rgb(255, 131, 0));
-    padding-bottom: 5px;
+    /*background: linear-gradient(rgb(255,216,122), rgb(255, 131, 0));*/
+    /*background: linear-gradient(135deg,#2b2b2b,#1c1c1c,#0f0f0f);*/
+    background: linear-gradient(135deg,#151515,#525252,#0f0f0f);
+    padding-bottom: 8px;
     padding-top: 2px;
     margin: 5px 0px;
 }
 .slide{
     height: auto;
+    
 }
 figcaption{
     background-color: black;
     font-size: small;
-    padding: 5px;
+    padding: 15px;
     margin-top: -4px;
+}
+.dots{
+    
+    margin-top: 100px;
+}
+.card{
+    margin-top: 10px;
+    margin-bottom: 0;
+    border-radius: 5px;
 }

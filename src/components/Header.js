@@ -10,10 +10,9 @@ function Header(){
             <div id="logoElemental">
                 <Link to="/">
                     {<img src={logoBlanco} alt="logo elemental" id='logo'></img>}
-                </Link>                    
-                    {/*<img src={logo} alt="logo elemental" id='logo'></img>*/}
+                </Link>                
             </div>
-            <h1>ELEMENTAL CALISTENIA</h1>
+            <h1 id="titulo">ELEMENTAL</h1>
             <div id="navbar">
                 <Navbar/>
             </div>
