@@ -1,5 +1,5 @@
 import './Calistenia.css'
-import logo from '../assets/img/logoElemental.png'
+
 
 function Calistenia(){
 
