@@ -1,16 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 import './Login.css'
-import { useState } from 'react';
 
-function iniciar(){
-    
-}
+
 
 function Login(){
     const navigate = useNavigate()    
 
-    const [email,setEmail] = useState("")
-    const [password,setPassword] = useState("")
+
 
     const handleSubmmit = async (e) =>{
 
