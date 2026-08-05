@@ -5,9 +5,9 @@ import fotoFran from '../assets/img/profes/fran.webp'
 import { useState, useEffect } from 'react';
 
 
-const profes =[{'nombre':'Ignacio Quintana','desc':'Descripción de nacho','foto':fotoNacho},
-                {'nombre':'Fran García', 'desc':'Descripción de Fran', 'foto':fotoFran},
-                {'nombre':'Emanuel Mena','desc':'Descripción de Emanuel', 'foto':fotoMena}
+const profes =[{'nombre':'Ignacio','desc':'Descripción de nacho','foto':fotoNacho},
+                {'nombre':'Fran', 'desc':'Descripción de Fran', 'foto':fotoFran},
+                {'nombre':'Emanuel','desc':'Descripción de Emanuel', 'foto':fotoMena}
 ]
 
 function Nosotros(){
@@ -39,8 +39,8 @@ function Nosotros(){
             <figure className='card'>
                 <img src={profes.foto} alt={`slide-${i}`}/>
                 <figcaption>
-                    <h3>Nombre: {profes.nombre}</h3>
-                    <h3>{profes.desc}</h3>
+                    <h3>Profe {profes.nombre}</h3>
+                    
                 </figcaption>
             </figure>
           </div>

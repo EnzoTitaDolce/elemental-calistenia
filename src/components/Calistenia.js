@@ -7,27 +7,54 @@ function Calistenia(){
         <div>
             <h1 id="calish1">¿Qué es la Calistenia?</h1>
             <section id='calistenia'>
-            <article id='calisteniaArt'>
-            <p>La calistenia es una forma de entrenamiento que utiliza el peso de tu propio cuerpo para
-            desarrollar <strong>fuerza, resistencia, movilidad y control corporal</strong>. 
-            No necesitás máquinas costosas ni experiencia previa: podés empezar desde 
-            cero y progresar a tu ritmo.</p>
-       
-            <p>Es una disciplina que transforma la manera en que te movés y te sentís. 
-            Con la práctica constante, vas a mejorar tu <strong>condición física, postura, 
-            coordinación y energía diaria, mientras desarrollás un físico fuerte, ágil y funcional.</strong></p>
-
-            <p>Se adapta a cualquier edad y nivel. Cada logro —desde tu primera       
-            flexión hasta movimientos más avanzados— se convierte en una motivación para seguir            
-            superándote.</p>
-
-            <p>Entrenar en <strong>ELEMENTAL</strong>, te conecta con una comunidad con la que te sentís 
-                incentivado y contenido mientras desbloqueas nuevos logros o simplemente 
-                realizas actividad física para sentirte saludable </p>
-            <p>
-                ELEMENTAL no es solo entrenamiento, es EVOLUCIÓN personal.
-            </p>
+            <article id="fuerza" className='articleItem'>
+                <details>
+                    <summary>
+                    Fuerza
+                    </summary>
+                    <p>
+                        Construí un cuerpo que impresione por su potencia, no solo por su apariencia.
+                    </p>
+                </details>
+                
             </article>
+            <article id="movilidad" className='articleItem'>
+                <details>
+                    <summary>Movilidad</summary>
+                    <p>
+                        Movete con libertad, agilidad y sin límites.
+                    </p>
+                </details>
+                
+            </article>
+            <article id="control" className='articleItem'>
+                <details>
+                    <summary>Control</summary>
+                    <p>
+                        Convertí cada movimiento en una demostración de dominio absoluto.
+                    </p>
+                </details>
+                
+            </article>
+            <article id="equilibrio" className='articleItem'>
+                <details>
+                    <summary>Equilibrio</summary>
+                    <p>
+                        Encontrá la estabilidad que transforma tu rendimiento.
+                    </p>
+                </details>
+                
+            </article>
+            <article id="evolucion" className='articleItem'>
+                <details>
+                    <summary>Evolución</summary>
+                    <p>
+                        Cada repetición te acerca a una mejor versión de vos mismo.
+                    </p>
+                    </details>
+            </article>
+
+
             </section>
         </div>
     )
