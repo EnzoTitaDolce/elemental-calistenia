@@ -1,0 +1,29 @@
+#principalPanelAdmin{
+    width: 100%;    
+    min-height: 100vh;
+}
+#PanelAdminForm{
+    margin-top: 10px;
+    padding: 5px;
+    width: 80%;
+    margin-left: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+.linkAdmin{
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border:none;
+    padding: 10px;
+    background-color: rgb(255, 254, 254);
+    box-shadow: 0 0px 0px white;
+    font-family: "League Spartan", sans-serif;
+    /*font-family: "Teko", sans-serif;*/
+    /*font-family: "Anton", sans-serif;*/
+    /*font-family: "Bebas Neue", sans-serif;*/
+    letter-spacing: 0.1em;
+    text-align: center;
+}

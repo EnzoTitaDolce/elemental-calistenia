@@ -1,18 +1,45 @@
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Panel.css'
 
 function Panel(){
-
-    function borrarToken(){
-        if (sessionStorage.getItem("access_token")){
-            sessionStorage.clear()
-        }else{
-            alert("No se encuentra el token o ya ha sido eliminado.")
-        }
+    const baseUrl = "https://elementalgym.onrender.com/"
+    const navigate = useNavigate()
+    if(!sessionStorage.getItem("access_token")){
+        navigate("/home")
     }
 
-    return(<div>
-        Este es el Panel Admin
-        <input type ="button" onClick={borrarToken} value="Borrar"></input>
+    async function logOut(){
+        alert("saliendo")
+        try{
+            const token = sessionStorage.getItem("access_token")
+            await fetch(baseUrl+"api/auth/super-admin/logout",{
+                method:"POST",
+                headers:{
+        
+                    "Authorization":`Bearer ${token}`
+                }
+            });
+            sessionStorage.clear()
+            navigate("/")
+        }
+
+        catch(e){}
+        
+
+
+    }
+
+    return(<div id="principalPanelAdmin">
+        <h1>Panel Administrador</h1>
+        
+        <section id="PanelAdminForm">
+            <Link to="/panelsocios" className='linkAdmin'>Socios</Link>
+            <Link to="/panelsocios" className='linkAdmin'>Mensualidades</Link>
+            <Link to="/panelsocios" className='linkAdmin'>Promociones</Link>
+            <Link to="/panelsocios" className='linkAdmin'>Profesores</Link>
+        </section>
+        <button onClick={logOut}>Salir</button>
     </div>)
 }
 

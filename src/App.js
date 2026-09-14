@@ -8,6 +8,7 @@ import Contacto from "./components/Contacto.js"
 import Login from  "./pages/Login.js"
 import Panel from "./components/Panel.js"
 import ProtectedRoute from "./components/ProtectedRoute.js";
+import Panelsocios from "./components/socios/Panelsocios.js";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/calistenia" element={<Calistenia/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/panel" element={<ProtectedRoute><Panel/></ProtectedRoute>}/>
+        <Route path="/panelSocios" element={<ProtectedRoute><Panelsocios/></ProtectedRoute>}/>
       </Routes>
     </BrowserRouter>
     
