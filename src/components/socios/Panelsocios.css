@@ -73,13 +73,20 @@ span{
     display: block;
 }
 #tablaSocios, #tablaSocios tr, #tablaSocios td{
-    border:1px solid white;
+    /*border:1px solid white;*/
+    padding: 2px;
+    border-radius: 5px;
 }
-#tablaSocios tr:nth-child(even){
+#tablaSocios tr:nth-child(odd){
     /*background-color: #f8f8fa;*/
     background-color: rgb(202, 202, 202);
     color:black
 }
+
+#tablaSocios tr:nth-child(even){
+    background-color: rgba(59, 59, 59, 0.5);
+}
+
 #tablaSocios{
     width: 95%;
     margin-top: 10px;

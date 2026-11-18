@@ -9,7 +9,7 @@ import Login from  "./pages/Login.js"
 import Panel from "./components/Panel.js"
 import ProtectedRoute from "./components/ProtectedRoute.js";
 import Panelsocios from "./components/socios/Panelsocios.js";
-
+import Mensualidades from "./components/mensualidades/Mensualidades.js"
 function App() {
   return (
     
@@ -23,6 +23,7 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/panel" element={<ProtectedRoute><Panel/></ProtectedRoute>}/>
         <Route path="/panelSocios" element={<ProtectedRoute><Panelsocios/></ProtectedRoute>}/>
+        <Route path="/panelSocios/:id/mensualidades" element = {<ProtectedRoute><Mensualidades/></ProtectedRoute>}></Route>
       </Routes>
     </BrowserRouter>
     

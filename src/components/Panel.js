@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import './Panel.css'
 
 function Panel(){
-    const baseUrl = "https://elementalgym.onrender.com/"
+    const baseUrl = "http://127.0.0.1:5000/"
+    //const baseUrl = "https://elementalgym.onrender.com/"
     const navigate = useNavigate()
     if(!sessionStorage.getItem("access_token")){
         navigate("/home")
@@ -35,7 +36,7 @@ function Panel(){
         
         <section id="PanelAdminForm">
             <Link to="/panelsocios" className='linkAdmin'>Socios</Link>
-            <Link to="/panelsocios" className='linkAdmin'>Mensualidades</Link>
+            <Link to="/panelsocios/mensualidades" className='linkAdmin'>Mensualidades</Link>
             <Link to="/panelsocios" className='linkAdmin'>Promociones</Link>
             <Link to="/panelsocios" className='linkAdmin'>Profesores</Link>
         </section>

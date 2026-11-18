@@ -1,16 +1,25 @@
-import { resumeToPipeableStream } from 'react-dom/server';
 import './Panelsocios.css'
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 function Panelsocios(){
 
-     const baseUrl = "https://elementalgym.onrender.com/"
+    //Variable con la url base//
+    const baseUrl = "https://elementalgym.onrender.com/"
+    //const baseUrl = "http://127.0.0.1:5000/"
 
+    //estados que controlan el modal y la lista de socios
     const [modalAbierto,setModalAbierto] = useState(false);
     const [socios,setSocios] = useState([]);
     const [mostrar,setMostrar] = useState(false)
     
+    //Accede al token guardado en la sesión para incluirlo en la
+    //cabecera de las peticiones
     const token = sessionStorage.getItem("access_token")
+
+    /*función asíncrona que envía la petición con los datos
+    para registrar al socio*/
     async function registrarSocio(socio){
+        //guarda la respuesta de la petición
         const respuesta = await fetch(baseUrl+"api/socios",{
                 method:"POST",
                 headers:{
@@ -19,6 +28,7 @@ function Panelsocios(){
                 },
                 body:socio
         })
+        //traduce la respuesta de la petición a un json
         const resultado =  respuesta.json()
         return {
             ok:respuesta.ok,
@@ -27,9 +37,9 @@ function Panelsocios(){
         
     }
 
+    //ídem anterior para listar socios
     async function getSocios(){
-        try{
-
+        try{            
             const respuesta = await fetch(baseUrl+"api/socios",{
                 method:"GET",
                 headers:{
@@ -38,14 +48,16 @@ function Panelsocios(){
                 }
             })
             const resultado = await respuesta.json()
+            console.log(token)
             setSocios(resultado.items)
             setMostrar(true)
-            console.log(resultado.items)
+            
         }
         catch(e){
             console.log("Error: ",e)
         }
     }
+    useEffect(() =>{getSocios()},[])
     
     async function handleSubmit(e){
         e.preventDefault();
@@ -81,8 +93,13 @@ function Panelsocios(){
             <div id="botonera">
                 <button onClick={getSocios}>Ver socios</button>
                 <button onClick={()=>setModalAbierto(true)}>Registrar Socio</button>
-                <button>Buscar Socio</button>
+                {/* <button>Buscar Socio</button> */}
+                <Link to="/panel" className="linkAdmin">Volver</Link>
+
             </div>
+            {!mostrar && (                
+                <h1 id="sin_socios">No hay socios para mostrar.</h1>
+            )}
             {mostrar && (
                 <table id="tablaSocios">
                 <thead>
@@ -107,14 +124,19 @@ function Panelsocios(){
                             {/* <td>{socio.dni}</td>
                             <td>{socio.telefono}</td>
                             <td>{socio.categoria.nombre_categoria}</td> */}
-                            <td>{socio.estado_mensualidad}</td>
-                            <td>{socio.fecha_vencimiento_mensualidad ?? "Sin fecha"}</td>
+                            <td>
+                                <Link to = {`/panelsocios/${socio.id}/mensualidades`}>
+                                {socio.estado_mensualidad}
+                                </Link>
+                            </td>
+                            <td>{new Date(socio.fecha_vencimiento_mensualidad).toLocaleDateString
+                            ('es-AR',{timezone:'UTC'}) ?? "Sin fecha"}</td>
                         </tr>
                     ))}                    
                 </tbody>
             </table>
-
-            )}
+                )
+                }
             
 
             {modalAbierto && (
