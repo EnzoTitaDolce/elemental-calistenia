@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import './Panel.css'
 
 function Panel(){
-    const baseUrl = "http://127.0.0.1:5000/"
-    //const baseUrl = "https://elementalgym.onrender.com/"
+    //const baseUrl = "http://127.0.0.1:5000/"
+    const baseUrl = "https://elementalgym.onrender.com/"
     const navigate = useNavigate()
     if(!sessionStorage.getItem("access_token")){
         navigate("/home")
