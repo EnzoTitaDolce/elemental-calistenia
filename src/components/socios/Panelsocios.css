@@ -86,7 +86,9 @@ span{
 #tablaSocios tr:nth-child(even){
     background-color: rgba(59, 59, 59, 0.5);
 }
-
+#tablaSocios a{
+    text-decoration: none;
+}
 #tablaSocios{
     width: 95%;
     margin-top: 10px;
@@ -106,4 +108,15 @@ button{
     color:black;
     border: none;
     border-radius: 5px;
+}
+
+.vencido{
+    text-transform: uppercase;
+    color:white;
+    background-color: red;
+}
+.activo{
+    text-transform: uppercase;
+    color: white;
+    background-color: green;
 }

@@ -7,7 +7,8 @@ function Mensualidades() {
     const [mensualidades, setMensualidades] = useState(false);
     const [registros, setRegistros] = useState([]);
 
-    const baseUrl = "https://elementalgym.onrender.com/";
+    const baseUrl = "http://127.0.0.1:5000/"
+    //const baseUrl = "https://elementalgym.onrender.com/";
     const token = sessionStorage.getItem("access_token");
 
     const { id } = useParams();
@@ -55,9 +56,10 @@ function Mensualidades() {
 
         const datos = {
             metodo_pago_id: parseInt(metodoPago),
-            fecha_pago: new Date().toISOString()
+            fecha_pago: new Date().toISOString(),
+            fecha_inicio: new Date().toISOString()
         };
-
+        console.log(datos)
         try {
             const respuesta = await fetch(
                 baseUrl + `api/socios/${id}/mensualidades`,
@@ -139,7 +141,7 @@ function Mensualidades() {
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Fecha de Inicio</th>
+                            
                             <th>Fecha de Finalización</th>
                             <th>Fecha Pago</th>
                             <th>Método de pago</th>
@@ -151,14 +153,14 @@ function Mensualidades() {
                             <tr key={registro.id}>
                                 <td>{registro.id}</td>
 
-                                <td>
-                                    {new Date(registro.fecha_inicio).toLocaleDateString("es-AR", {
-                                        timeZone: "UTC"
-                                    })}
-                                </td>
+                               
 
                                 <td>
-                                    {new Date(registro.fecha_fin).toLocaleDateString("es-AR", {
+                                    {new Date(
+                                        new Date(registro.fecha_pago).setMonth(
+                                            new Date(registro.fecha_pago).getMonth() + 1
+                                        )
+                                    ).toLocaleDateString("es-AR", {
                                         timeZone: "UTC"
                                     })}
                                 </td>

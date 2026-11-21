@@ -6,7 +6,8 @@ import { useState, useEffect, useCallback } from 'react';
 function Panelsocios() {
 
     // Variable con la URL base
-    const baseUrl = "https://elementalgym.onrender.com/";
+    //const baseUrl = "https://elementalgym.onrender.com/";
+    const baseUrl = "http://127.0.0.1:5000/"
 
     // Estados que controlan el modal y la lista de socios
     const [modalAbierto, setModalAbierto] = useState(false);
@@ -146,8 +147,9 @@ function Panelsocios() {
                                 <td>{socio.nombre}</td>
                                 <td>{socio.apellido}</td>
 
-                                <td>
-                                    <Link to={`/panelsocios/${socio.id}/mensualidades`}>
+                                <td className={socio.estado_mensualidad === 'vencido' ? "vencido":"activo"}>
+                                    <Link to={`/panelsocios/${socio.id}/mensualidades`}
+                                    className={socio.estado_mensualidad === 'vencido' ? "vencido":"activo"}>
                                         {socio.estado_mensualidad}
                                     </Link>
                                 </td>
