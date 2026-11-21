@@ -6,8 +6,8 @@ import { useState, useEffect, useCallback } from 'react';
 function Panelsocios() {
 
     // Variable con la URL base
-    //const baseUrl = "https://elementalgym.onrender.com/";
-    const baseUrl = "http://127.0.0.1:5000/"
+    const baseUrl = "https://elementalgym.onrender.com/";
+    //const baseUrl = "http://127.0.0.1:5000/"
 
     // Estados que controlan el modal y la lista de socios
     const [modalAbierto, setModalAbierto] = useState(false);

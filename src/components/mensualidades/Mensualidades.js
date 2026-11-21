@@ -7,8 +7,8 @@ function Mensualidades() {
     const [mensualidades, setMensualidades] = useState(false);
     const [registros, setRegistros] = useState([]);
 
-    const baseUrl = "http://127.0.0.1:5000/"
-    //const baseUrl = "https://elementalgym.onrender.com/";
+    //const baseUrl = "http://127.0.0.1:5000/"
+    const baseUrl = "https://elementalgym.onrender.com/";
     const token = sessionStorage.getItem("access_token");
 
     const { id } = useParams();
